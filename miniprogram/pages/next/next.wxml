@@ -1,0 +1,29 @@
+<view class="bg" style="opacity:{{0.5}}">
+    <image class="bg-image" mode="scaleToFill">
+    </image>
+  </view>
+<view class="container2">
+  <button class="know" bindtap="know"><navigator url="../yiqing/yiqing" open-type="redirect">疫情数据</navigator></button>
+<button class="icw" bindtap="icw">宠物属性</button>
+<button class="meishi">
+  <navigator url="../meishi/meishi" open-type="redirect">美食</navigator>
+</button>
+<button class="meishi">
+  <navigator url="../xinqing/xinqing" open-type="redirect">心情</navigator>
+</button>
+</view>
+<view wx:if="{{next== 1}}">
+  
+
+</view>
+<view class="gs" wx:if="{{next == 0}}">
+  <view>
+  <text class="nr">属性：萌</text>
+</view><view>
+  <text class="nr">特点爱好：吃了睡，睡了吃</text>
+</view><view>
+  <text class="nr">最喜欢的事情：陪伴朋友，倾听</text>
+</view><view>
+  <text class="nr">最讨厌的事情：起床，饿肚子</text>
+</view>
+</view>

@@ -1,0 +1,36 @@
+<view class="content">
+  <image class='background' src="../../images/timg.jpg" mode="aspectFill"></image>
+  <view class="title">树洞</view>
+  <scroll-view scroll-y scroll-into-view='{{toView}}' class="chatlist">
+    <block wx:for="{{chat_list}}" wx:for-index="index" wx:for-item="item">
+
+      <!-- 单个消息1 客服发出（左） -->
+      <view wx:if='{{item.label==1}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/pet.jpg'></image>
+        </view>
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <!-- <image style='width: 4vw;' src='../../images/left_msg.png' mode='widthFix'></image> -->
+        </view>
+        <view class='leftMsg'>{{item.text}}</view>
+      </view>
+
+      <!-- 单个消息2 用户发出（右） -->
+      <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <view class='rightMsg'>{{item.text}}</view>
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <!-- <image style='width: 4vw;' src='../../images/right_msg.png' mode='widthFix'></image> -->
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/self.jpg'></image>
+        </view>
+      </view>
+
+    </block>
+    <view class="block_div"></view>
+  </scroll-view>
+  <view class="lan">
+    <input bindinput="input1" value="{{value}}"placeholder="在这里留下属于个人的轻语吧~" />
+    <button bindtap="tap1">send</button>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+Page({
+data:{
+region:"",
+keyword:"",
+title:"",
+address:"",
+category:"",
+locationlat:"",
+locationlng:"",
+i:0
+},
+input1:function(e){
+  this.setData({
+region:e.detail.value
+  })
+},
+input2:function(e){
+  this.setData({
+    keyword:e.detail.value
+  })
+},tap:function(){
+  this.setData({
+    i:this.data.i+1
+  })
+  if(this.data.i==10){
+    this.setData({
+      i:1
+    })
+  }
+  console.log(this.data.i)
+  var that=this
+  wx.request({
+    url:"https://apis.map.qq.com/ws/place/v1/suggestion",
+    data:{
+      region:that.data.region,
+      keyword:that.data.keyword,
+      key:"自己的",
+    },
+  success:function(res){
+    console.log(res.data)
+    that.setData({
+      title:res.data.data[that.data.i].title,
+      address:res.data.data[that.data.i].address,
+      category:res.data.data[that.data.i].category,
+      locationlat:res.data.data[that.data.i].location.lat,
+      locationlng:res.data.data[that.data.i].location.lng
+    })
+  }
+  })
+}
+})

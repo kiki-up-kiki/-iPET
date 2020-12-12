@@ -1,0 +1,18 @@
+<view>
+  <image class='background' src="../../images/meishi.jpg" mode="aspectFill"></image>
+<input bindinput="input1" class="didian"placeholder="请输入地点"></input>
+<input bindinput="input2" class="guanjianci"placeholder="请输入关键词"></input>
+<button bindtap="tap">点击此处获得结果(或换下一家))</button>
+<view class="lan">
+<text>名字:    {{title}}
+</text>
+<text>地址:    {{address}}
+</text>
+<text>类别:    {{category}}
+</text>
+<text>纬度:    {{locationlat}}
+</text>
+<text>经度:    {{locationlng}}
+</text>
+</view>
+</view>

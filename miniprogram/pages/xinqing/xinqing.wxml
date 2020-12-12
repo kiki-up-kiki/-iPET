@@ -1,0 +1,18 @@
+<view>
+  <view class="lan" wx:if="{{visiable}}">
+    <input 
+      bindinput="input1" 
+      value="{{value}}"
+      placeholder="请上传您当天的心情值~(0~100)" 
+      type="number"
+    />
+    <button wx:if="{{value<=100&&value>=0}}" bindtap="tap1">send</button>
+  </view>
+<button bindtap="search1" class="search">查看最近七天的心情报告并get心理小建议</button>
+<view wx:if="{{visiable2}}">
+<view class='score'>您前七天平均的心情值为:   {{score}}</view>
+<view class='xinqing'>{{result}}</view>
+</view>
+  <image class='background2' src="../../images/xinqing.jpg" mode="aspectFill"></image>
+
+</view>

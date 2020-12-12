@@ -1,0 +1,2 @@
+<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="log"><navigator url="../index/index" open-type="redirect">授权登录</navigator></button>
+<image  class='background' src="../../images/denglu.jpg" mode="aspectFill"></image>

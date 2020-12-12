@@ -1,0 +1,54 @@
+<view >
+  <image class='bg-image' src="../../images/bg.jpg" mode="aspectFill"></image>
+  <view class="container1">
+  <text class="tem">这里是{{id}}的家哦~</text>
+  <text class="date">  {{id}}陪伴了我{{date1}}天</text>
+</view>
+<view class="line" style='background-color:white'></view>
+<view class="layout_vertical">
+  <text class="health">健康：{{health}}</text>
+  <text class="feeling">心情：{{feeling}}</text>
+  <text class="growth">成长：{{growth}}</text>
+<text class="now">状态：{{now}}</text>
+</view>
+<view class="container3">
+  <image mode="widthFit" src="{{pict}}"></image>
+</view>
+<view class="container4" wx:if="{{intomodal}}"  >
+  <button class="mini" bindtap="one">喂食</button>
+  <button class="mini" bindtap="two">熬夜</button>
+  <button class="mini" bindtap="three">学习</button>
+  <button class="mini" bindtap="four">玩耍</button>
+  <button class="mini" bindtap="five">喂药</button>
+</view>
+<view wx:if="{{sign}}"><button bindtap="company" class="into">陪伴(签到)</button></view>
+<button bindtap="into" class="into">互动</button>
+<view class="container2">
+<button bindtap="bindViewTab" class="konw">
+  <navigator url="../next/next" open-type="redirect">敲敲黑板</navigator>
+</button>
+<button class="ai">
+  <navigator url="../contact/contact" open-type="redirect">聊天</navigator>
+</button>
+<button bindtap="save" class="save">
+  保存数据
+</button>
+</view><view >
+<button bindtap="denglu" class="as">
+  <navigator url="../denglu/denglu" open-type="redirect">登录</navigator>
+</button></view>
+<view >
+  <button class="show-btn" bindtap="changeYL">
+    <icon class="iconfont icon-bangzhu" ></icon>
+
+  </button>
+</view>
+<view class="modal-mask" bindtap="hideModal"  wx:if="{{showModal}}"></view>
+
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <image class='view-image'src="../../images/tishi.jpg"></image>
+</view>
+</view>
+
+
+

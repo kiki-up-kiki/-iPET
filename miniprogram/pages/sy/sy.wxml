@@ -1,0 +1,15 @@
+<view>
+<view class="bg" style="opacity:{{0.5}}">
+    <image class="bg-image" mode="scaleToFill">
+    </image>
+  </view>
+  <view class="title">欢迎来到iPet的世界</view>
+<view class="center">
+  <input bindinput="input1" class="input" placeholder="昵称随时可以修改哦">  </input>
+</view>
+  <view>   
+  <button bindtap="name"> 
+    <navigator url="../index/index" open-type="redirect" class="sure">确定</navigator>
+  </button>
+</view>
+</view>

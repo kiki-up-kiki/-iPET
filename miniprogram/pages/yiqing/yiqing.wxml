@@ -1,0 +1,10 @@
+<view>
+<image class='background' src="../../images/yiqing1.jpg" mode="aspectFill"></image>
+<view>
+  <text>\n</text><text>\n</text>
+  <block wx:for="{{news_list}}" wx:for-index="index" wx:for-item="item">
+    <view class="yq">时间：{{item.pubDateStr}}<text>\n</text>新闻内容：{{item.title}}
+      <text>\n</text><text>\n</text></view>
+  </block>
+</view>
+</view>
